@@ -1,0 +1,7 @@
+package com.xprod.spring.xprod.domain;
+
+import java.io.Serializable;
+
+public class Fourniseur implements Serializable {
+
+}

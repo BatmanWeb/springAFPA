@@ -1,0 +1,5 @@
+package com.xprod.spring.xprod.domain;
+
+public class Fourniseur {
+
+}
