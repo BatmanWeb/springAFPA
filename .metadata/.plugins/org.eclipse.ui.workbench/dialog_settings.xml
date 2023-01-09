@@ -7,9 +7,12 @@
 		</list>
 	</section>
 	<section name="PreferencesImportWizard">
-		<item key="" value="C:\Users\77011-05-02\Downloads\Workspace3.epf"/>
+		<item key="" value="D:\Téléchargement\Workspace3.epf"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="D:\Téléchargement\Workspace3.epf"/>
 			<item value="C:\Users\77011-05-02\Downloads\Workspace3.epf"/>
 		</list>
+	</section>
+	<section name="FileSystemImportWizard">
 	</section>
 </section>
