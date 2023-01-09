@@ -8,127 +8,125 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-@Entity
+
+@Entity 
 @Table(name="FOURNISSEUR")
-public class Fournisseur implements Serializable {
+public class Fournisseur implements Serializable{
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="IDFOUR")
-	private Long id;
-	@Column(name="NOM")
-	private String nom;
-	@Column(name="RS")
-	private String rs;
-	@Column(name="RUE")
-	private String rue;
-	@Column(name="CP")
-	private String cp;
-	@Column(name="VILLE")
-	private String ville;
-	@Column(name="PAYS")
-	private String pays;
-	@Column(name="TEL")
-	private String tel;
-	@Column(name="EMAIL")
-	private String email;
-	@Column(name="REFEXT")
-	private String refExt;
-	@Column(name="PRIXU")
-	private double PrixU;
+	@Column(name = "IDFOURNISSEUR")
+	private Long idFournisseur;
+	@Column(name = "NOMFOURNISSEUR")
+	private String nomFournisseur;
+	@Column(name = "RAISONSOCIALEFOURNISSEUR")
+	private String raisonSocialeFournisseur;
+	@Column(name = "RUEFOURNISSEUR")
+	private String rueAdresseFournisseur;
+	@Column(name = "CODEPOSTALFOURNISSEUR")
+	private String codePostalAdresseFournisseur;
+	@Column(name = "VILLEFOURNISSEUR")
+	private String villeAdresseFournisseur;
+	@Column(name = "PAYSFOURNISSEUR")
+	private String paysAdresseFournisseur;
+	@Column(name = "EMAILFOURNISSEUR")
+	private String emailFournisseur;
+	@Column(name = "TELFOURNISSEUR")
+	private String telFournisseur;
+	@Column(name = "REFEXTERNEPRODUIT")
+	private String refExterneProduit;
+	@Column(name = "REFAPPROHTPRODUIT")
+	private double prixApproHTProduit;
 	
 	
-	
-	
-	
-	
-	
-	public Long getId() {
-		return id;
+	public Long getIdFournisseur() {
+		return idFournisseur;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public String getNomFournisseur() {
+		return nomFournisseur;
 	}
-	public String getNom() {
-		return nom;
+	public String getRaisonSocialeFournisseur() {
+		return raisonSocialeFournisseur;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	public String getRueAdresseFournisseur() {
+		return rueAdresseFournisseur;
 	}
-	public String getRs() {
-		return rs;
+	public String getCodePostalAdresseFournisseur() {
+		return codePostalAdresseFournisseur;
 	}
-	public void setRs(String rs) {
-		this.rs = rs;
+	public String getVilleAdresseFournisseur() {
+		return villeAdresseFournisseur;
 	}
-	public String getRue() {
-		return rue;
+	public String getPaysAdresseFournisseur() {
+		return paysAdresseFournisseur;
 	}
-	public void setRue(String rue) {
-		this.rue = rue;
+	public String getEmailFournisseur() {
+		return emailFournisseur;
 	}
-	public String getCp() {
-		return cp;
+	public String getTelFournisseur() {
+		return telFournisseur;
 	}
-	public void setCp(String cp) {
-		this.cp = cp;
+	public String getRefExterneProduit() {
+		return refExterneProduit;
 	}
-	public String getVille() {
-		return ville;
+	public double getPrixApproHTProduit() {
+		return prixApproHTProduit;
 	}
-	public void setVille(String ville) {
-		this.ville = ville;
+	public void setIdHournisseur(Long idFournisseur) {
+		this.idFournisseur = idFournisseur;
 	}
-	public String getPays() {
-		return pays;
+	public void setNomFournisseur(String nomFournisseur) {
+		this.nomFournisseur = nomFournisseur;
 	}
-	public void setPays(String pays) {
-		this.pays = pays;
+	public void setRaisonSocialeFournisseur(String raisonSocialeFournisseur) {
+		this.raisonSocialeFournisseur = raisonSocialeFournisseur;
 	}
-	public String getTel() {
-		return tel;
+	public void setRueAdresseFournisseur(String rueAdresseFournisseur) {
+		this.rueAdresseFournisseur = rueAdresseFournisseur;
 	}
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setCodePostalAdresseFournisseur(String codePostalAdresseFournisseur) {
+		this.codePostalAdresseFournisseur = codePostalAdresseFournisseur;
 	}
-	public String getEmail() {
-		return email;
+	public void setVilleAdresseFournisseur(String villeAdresseFournisseur) {
+		this.villeAdresseFournisseur = villeAdresseFournisseur;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPaysAdresseFournisseur(String paysAdresseFournisseur) {
+		this.paysAdresseFournisseur = paysAdresseFournisseur;
 	}
-	public String getRefExt() {
-		return refExt;
+	public void setEmailFournisseur(String emailFournisseur) {
+		this.emailFournisseur = emailFournisseur;
 	}
-	public void setRefExt(String refExt) {
-		this.refExt = refExt;
+	public void setTelFournisseur(String telFournisseur) {
+		this.telFournisseur = telFournisseur;
 	}
-	public double getPrixU() {
-		return PrixU;
+	public void setRefExterneProduit(String refExterneProduit) {
+		this.refExterneProduit = refExterneProduit;
 	}
-	public void setPrixU(double prixU) {
-		this.PrixU = prixU;
+	public void setPrixApproHTProduit(double prixApproHTProduit) {
+		this.prixApproHTProduit = prixApproHTProduit;
 	}
-	public Fournisseur(Long id, String nom, String rs, String rue, String cp, String ville, String pays, String tel,
-			String email, String refExt, double prixU) {
+	public Fournisseur(Long idFournisseur, String nomFournisseur, String raisonSocialeFournisseur,
+			String rueAdresseFournisseur, String codePostalAdresseFournisseur, String villeAdresseFournisseur,
+			String paysAdresseFournisseur, String emailFournisseur, String telFournisseur, String refExterneProduit,
+			double prixApproHTProduit) {
 		super();
-		this.id = id;
-		this.nom = nom;
-		this.rs = rs;
-		this.rue = rue;
-		this.cp = cp;
-		this.ville = ville;
-		this.pays = pays;
-		this.tel = tel;
-		this.email = email;
-		this.refExt = refExt;
-		this.PrixU = prixU;
+		this.idFournisseur = idFournisseur;
+		this.nomFournisseur = nomFournisseur;
+		this.raisonSocialeFournisseur = raisonSocialeFournisseur;
+		this.rueAdresseFournisseur = rueAdresseFournisseur;
+		this.codePostalAdresseFournisseur = codePostalAdresseFournisseur;
+		this.villeAdresseFournisseur = villeAdresseFournisseur;
+		this.paysAdresseFournisseur = paysAdresseFournisseur;
+		this.emailFournisseur = emailFournisseur;
+		this.telFournisseur = telFournisseur;
+		this.refExterneProduit = refExterneProduit;
+		this.prixApproHTProduit = prixApproHTProduit;
 	}
 	public Fournisseur() {
 		super();
 	}
 	
 	
+	
 
-	
-	
 }

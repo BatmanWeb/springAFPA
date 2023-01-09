@@ -1,7 +1,7 @@
 package com.xprod.spring.xprod.domain;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,44 +9,42 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-@Entity
+
+
+@Entity 
 @Table(name="COMMANDE")
 public class Commande implements Serializable {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="IDCMD")
-	private Long idCmdLong;
-	@Column(name ="DATECMD")
-	private LocalDateTime dateCmdLong;
-	@Column(name ="FRAISPORT")
-	private double fraisPortCmd;
-	public Long getIdCmdLong() {
-		return idCmdLong;
+	@Column(name = "IDCOMMANDE")
+	private Long idCommande;
+	@Column(name = "DATECOMMANDE")
+	private LocalDate dateCommande;
+	
+	
+	public Long getIdCommande() {
+		return idCommande;
 	}
-	public void setIdCmdLong(Long idCmdLong) {
-		this.idCmdLong = idCmdLong;
+	public LocalDate getDateCommande() {
+		return dateCommande;
 	}
-	public LocalDateTime getDateCmdLong() {
-		return dateCmdLong;
+	public void setIdCommande(Long idCommande) {
+		this.idCommande = idCommande;
 	}
-	public void setDateCmdLong(LocalDateTime dateCmdLong) {
-		this.dateCmdLong = dateCmdLong;
+	public void setDateCommande(LocalDate dateCommande) {
+		this.dateCommande = dateCommande;
 	}
-	public double getFraisPortCmd() {
-		return fraisPortCmd;
-	}
-	public void setFraisPortCmd(double fraisPortCmd) {
-		this.fraisPortCmd = fraisPortCmd;
-	}
-	public Commande(Long idCmdLong, LocalDateTime dateCmdLong, double fraisPortCmd) {
+	public Commande(Long idCommande, LocalDate dateCommande) {
 		super();
-		this.idCmdLong = idCmdLong;
-		this.dateCmdLong = dateCmdLong;
-		this.fraisPortCmd = fraisPortCmd;
+		this.idCommande = idCommande;
+		this.dateCommande = dateCommande;
 	}
 	public Commande() {
 		super();
 	}
 	
 	
+	
+
 }

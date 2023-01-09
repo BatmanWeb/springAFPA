@@ -4,62 +4,56 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
-@Entity
+@Entity 
 @Table(name="PRODUITAPPRO")
-public class ProduitAppro extends Produits {
-	@Column(name ="PRIXACHATUT")
-    private double prixAchatUT;
-	@Column(name="REFEXT")
-	private String refExt;
-	@Column(name="PRIXU")
-	private double PrixU;
+public class ProduitAppro extends Produit{
+	
+	@Column(name = "PRIXACHATUNITAIREHTMO")
+	private Long prixAchatUnitaireHTMoyen;
+	@Column(name = "REFEXTERNEPRODUIT")
+	private String refExterneProduit;
+	@Column(name = "REFAPPROHTPRODUIT")
+	private double prixApproHTProduit;
 	
 	
-	public double getPrixAchatUT() {
-		return prixAchatUT;
+	public Long getPrixAchatUnitaireHTMoyen() {
+		return prixAchatUnitaireHTMoyen;
 	}
-	public void setPrixAchatUT(double prixAchatUT) {
-		this.prixAchatUT = prixAchatUT;
+	public String getRefExterneProduit() {
+		return refExterneProduit;
 	}
-	public String getRefExt() {
-		return refExt;
+	public double getPrixApproHTProduit() {
+		return prixApproHTProduit;
 	}
-	public void setRefExt(String refExt) {
-		this.refExt = refExt;
+	public void setPrixAchatUnitaireHTMoyen(Long prixAchatUnitaireHTMoyen) {
+		this.prixAchatUnitaireHTMoyen = prixAchatUnitaireHTMoyen;
 	}
-	public double getPrixU() {
-		return PrixU;
+	public void setRefExterneProduit(String refExterneProduit) {
+		this.refExterneProduit = refExterneProduit;
 	}
-	public void setPrixU(double prixU) {
-		this.PrixU = prixU;
+	public void setPrixApproHTProduit(double prixApproHTProduit) {
+		this.prixApproHTProduit = prixApproHTProduit;
 	}
 	public ProduitAppro() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public ProduitAppro(Long idProd, String refInterneProd, String designationProd, String descProd, double prixProdHT,
-			double prixAchatUT, String refExt, double prixU) {
-		super(idProd, refInterneProd, designationProd, descProd, prixProdHT);
-		this.prixAchatUT = prixAchatUT;
-		this.refExt = refExt;
-		this.PrixU = prixU;
+	public ProduitAppro(Long idProduit, String refInterneProduit, String designationProduit, String descriptifProduit,
+			double prixVenteUProduit) {
+		super(idProduit, refInterneProduit, designationProduit, descriptifProduit, prixVenteUProduit);
+		// TODO Auto-generated constructor stub
 	}
-	public ProduitAppro(Long idProd, String refInterneProd, String designationProd, String descProd,
-			double prixProdHT) {
-		super(idProd, refInterneProd, designationProd, descProd, prixProdHT);
+	public ProduitAppro(Long idProduit, String refInterneProduit, String designationProduit, String descriptifProduit,
+			double prixVenteUProduit, Long prixAchatUnitaireHTMoyen, String refExterneProduit,
+			double prixApproHTProduit) {
+		super(idProduit, refInterneProduit, designationProduit, descriptifProduit, prixVenteUProduit);
+		this.prixAchatUnitaireHTMoyen = prixAchatUnitaireHTMoyen;
+		this.refExterneProduit = refExterneProduit;
+		this.prixApproHTProduit = prixApproHTProduit;
 	}
 	
-
-	
-	
-	
 	
 
 	
-	
-	
-	
-	
-	
+
 }
