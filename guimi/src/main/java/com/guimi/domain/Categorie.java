@@ -17,7 +17,7 @@ public class Categorie implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID_CAT")
 	private long idCat;
-	@Column(name="NOM_CAT")
+	@Column(name="NOM_CAT", nullable= false)
 	private String nomCatString;
 	
 	

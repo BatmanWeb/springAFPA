@@ -1,5 +1,9 @@
 package com.guimi.repository;
 
-public interface IProduitJeuxRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.guimi.domain.ProduitJeux;
+
+public interface IProduitJeuxRepository extends JpaRepository<ProduitJeux, Long> {
 
 }
